@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aksi Sosial - Aidera.id</title>
+  <link rel="stylesheet" href="styleaksisosial.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <img src="Asset/Aidera.id.svg" alt="Logo Aidera" class="logo">
+    <nav class="nav-menu">
+      <a href="index.html">Beranda</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Mari Berdonasi <span class="dropdown-arrow">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="donasipasien.html">Donasi Pasien</a>
+          <a href="aksisosial.html">Aksi Sosial</a>
+          <a href="#">Galang Dana</a>
+          <a href="#">Donasi Rutin</a>
+        </div>
+      </div>
+      <a href="#" class="active">Aksi Sosial</a>
+      <a href="index.html#about-section" onclick="navigateToAbout()">Tentang Kami</a>
+      <a href="#">Fundraiser</a>
+    </nav>
+    <a href="login.html" class="login-btn">Masuk/Daftar</a>
+  </header>
+
+  <main class="donasi-pasien-main">
+    <section class="filter-section">
+      <div class="filters">
+        <select id="filter-kategori">
+          <option value="">Kategori Aksi</option>
+          <option value="Pendidikan">Pendidikan</option>
+          <option value="Kesehatan">Kesehatan</option>
+          <option value="Lingkungan">Lingkungan</option>
+          <option value="Bencana">Bencana</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+        <select id="filter-lokasi">
+          <option value="">Lokasi Aksi</option>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Papua">Papua</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Medan">Medan</option>
+        </select>
+        <select id="filter-status">
+          <option value="">Status Aksi</option>
+          <option value="aktif">Sedang Berlangsung</option>
+          <option value="selesai">Selesai</option>
+          <option value="akan-datang">Akan Datang</option>
+        </select>
+        <select id="filter-kondisi">
+          <option value="">Kondisi Terdesak</option>
+          <option value="waktu">Waktu tersisa sedikit</option>
+          <option value="dana">Dana hampir tercapai</option>
+        </select>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Cari aksi sosial atau penyelenggara...">
+        <button id="search-btn">Cari</button>
+      </div>
+    </section>
+
+    <section class="kampanye-section" id="kampanye-list">
+      <!-- Kartu kampanye aksi sosial akan di-generate oleh scriptaksisosial.js -->
+    </section>
+  </main>
+
+  <script src="scriptaksisosial.js"></script>
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <img src="Asset/panahatas.svg" alt="Back to Top" class="back-to-top-icon">
+  </button>
+</body>
+</html>

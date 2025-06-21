@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="styleregister.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- KIRI: Quote -->
+    <div class="left">
+      <div class="quote-box">
+        <p class="quote">“The best way to find yourself is to lose yourself in the service of others”.</p>
+        <p class="author">- Mahatma Gandhi -</p>
+        <div class="quote-logo">
+          <img src="Asset/handlogo.svg" alt="Helping Hands" />
+        </div>
+      </div>
+    </div>
+
+    <!-- KANAN: Form Register -->
+    <div class="right">
+      <a href="/Home/index.html" class="brand-link">
+        <img src="Asset/Aidera.id.svg" alt="Aidera.id Logo" class="brand-logo" />
+      </a>
+      <div class="signup-text">
+        <h1>Signup for Free</h1>
+        <p>Buat akun dan bantu orang yang membutuhkan.</p>
+      </div>
+
+      <form class="register-form">
+        <input
+        type="text"
+        placeholder="Email / No Telepon"
+        required
+        pattern="(^[0-9+\-\s]{6,15}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)"
+        title="Masukkan email yang valid atau nomor telepon yang hanya berisi angka, +, spasi, dan -"
+        />
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Kata Sandi" required />
+          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+        </div>
+        <div class="password-field">
+          <input type="password" id="confirm-password" placeholder="Verifikasi Kata Sandi" required />
+          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+        </div>
+        <button type="submit" class="btn primary">Daftar</button>
+      </form>
+      
+
+      <div class="alt-login">
+        <p>Atau daftar dengan</p>
+        <div class="social-icons">
+          <div class="icon-box"><img src="Asset/Logo Google.svg" alt="Google" /></div>
+          <div class="icon-box"><img src="Asset/Logo Email.svg" alt="Email" /></div>
+          <div class="icon-box"><img src="Asset/Logo Apple.svg" alt="Apple" /></div>
+        </div>
+      </div>
+
+      <div class="login-link">
+        <p>Sudah memiliki akun? <a href="login.html">Masuk</a>
+      </div>
+    </div>
+  </div>
+  <script>
+  const toggleIcons = document.querySelectorAll('.password-toggle-icon');
+
+  toggleIcons.forEach((icon, index) => {
+    const input = icon.previousElementSibling;
+
+    icon.addEventListener('click', () => {
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.firstElementChild.classList.remove('fa-eye');
+        icon.firstElementChild.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.firstElementChild.classList.remove('fa-eye-slash');
+        icon.firstElementChild.classList.add('fa-eye');
+      }
+    });
+  });
+
+  const input = document.querySelector('input[type="text"]');
+
+  function validateEmailOrPhone(value) {
+    const phoneRegex = /^[0-9+\-\s]{6,15}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return phoneRegex.test(value) || emailRegex.test(value);
+  }
+
+  input.addEventListener('input', () => {
+    if (validateEmailOrPhone(input.value)) {
+      input.setCustomValidity('');
+    } else {
+      input.setCustomValidity('Masukkan email yang valid atau nomor telepon yang benar');
+    }
+  });
+
+</script>
+</body>
+</html>

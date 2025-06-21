@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donasi Pasien - Aidera.id</title>
+  <link rel="stylesheet" href="styledonasipasien.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <img src="Asset/Aidera.id.svg" alt="Logo Aidera" class="logo">
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Beranda</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Mari Berdonasi <span class="dropdown-arrow">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="donasipasien.html">Donasi Pasien</a>
+          <a href="aksisosial.html">Aksi Sosial</a>
+          <a href="#">Galang Dana</a>
+          <a href="#">Donasi Rutin</a>
+        </div>
+      </div>
+      <a href="#" class="active">Donasi Pasien</a>
+      <a href="index.html#about-section" onclick="navigateToAbout()">Tentang Kami</a>
+      <a href="#">FAQ / Bantuan</a>
+    </nav>
+    <a href="login.html" class="login-btn">Masuk/Daftar</a>
+  </header>
+
+  <main class="donasi-pasien-main">
+    <section class="filter-section">
+      <div class="filters">
+        <select id="filter-penyakit">
+          <option value="">Jenis Penyakit</option>
+          <option value="Kanker">Kanker</option>
+          <option value="Jantung">Jantung</option>
+          <option value="Ginjal">Ginjal</option>
+          <option value="Kecelakaan">Kecelakaan</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+        <select id="filter-umur">
+          <option value="">Umur Pasien</option>
+          <option value="Anak-anak">Anak-anak</option>
+          <option value="Dewasa">Dewasa</option>
+          <option value="Lansia">Lansia</option>
+        </select>
+        <select id="filter-lokasi">
+          <option value="">Lokasi Pasien</option>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Papua">Papua</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Medan">Medan</option>
+        </select>
+        <select id="filter-kondisi">
+          <option value="">Kondisi Terdesak</option>
+          <option value="waktu">Waktu tersisa sedikit</option>
+          <option value="dana">Dana hampir tercapai</option>
+        </select>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Cari nama pasien atau yayasan...">
+        <button id="search-btn">Cari</button>
+      </div>
+    </section>
+
+    <section class="kampanye-section" id="kampanye-list">
+      <!-- Kartu kampanye donasi pasien akan di-generate oleh scriptdonasipasien.js -->
+    </section>
+  </main>
+
+  <script src="scriptdonasipasien.js"></script>
+  <script>
+    // Handle nav active state on click
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (this.getAttribute('href') === '#') e.preventDefault();
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <img src="Asset/panahatas.svg" alt="Back to Top" class="back-to-top-icon">
+  </button>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aidera - Beranda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <img src="Asset/Aidera.id.svg" alt="Logo Aidera" class="logo">
+    <nav class="nav-menu" id="nav-menu">
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Mari Berdonasi <span class="dropdown-arrow">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="donasipasien.html">Donasi Pasien</a>
+          <a href="aksisosial.html">Aksi Sosial</a>
+          <a href="galangdana.html">Galang Dana</a>
+          <a href="#">Donasi Rutin</a>
+        </div>
+      </div>
+        <a href="#about-section" onclick="scrollToSection('about-section')">Tentang Kami</a>
+        <a href="#">Fundraiser</a>
+        <a href="#">Laporan & Artikel</a>
+        <a href="#">FAQ / Bantuan</a>
+    </nav>
+    <a href="login.html" class="login-btn">Masuk/Daftar</a>
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-dropdown">
+          <a href="#" class="mobile-dropdown-toggle">Mari Berdonasi <span class="dropdown-arrow">▼</span></a>
+          <div class="mobile-dropdown-menu">
+            <a href="/DonasiPasien/donasipasien.html">Donasi Pasien</a>
+            <a href="/AksiSosial/aksisosial.html">Aksi Sosial</a>
+            <a href="/GalangDana/galangdana.html">Galang Dana</a>
+            <a href="#">Donasi Rutin</a>
+          </div>
+        </div>
+        <a href="#about-section" onclick="scrollToSection('about-section')">Tentang Kami</a>
+        <a href="#">Fundraiser</a>
+        <a href="#">Laporan & Artikel</a>
+        <a href="#">FAQ / Bantuan</a>
+        <a href="login.html" class="login-btn">Masuk/Daftar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero hero-section">
+    <img src="Asset/bgbanner1.png" alt="Bantu Arga" class="hero-bg">
+    <div class="hero-text">
+      <h1 class="headingbanner1">Bantu Mereka Melawan Penyakit, Satu Donasi Sekaligus</h1>
+      <h1 class="subheadingbanner1"><i>Dengan bantuanmu, harapan mereka tetap hidup. Dukung biaya pengobatan pasien yang membutuhkan sekarang juga.</i></h1>
+      <a href="#donasi-section" onclick="scrollToSection('donasi-pasien')" class="donate-btn">DONASI</a>
+    </div>
+  </section>
+
+  <!-- Category Menu -->
+  <section class="category-menu">
+    <button class="category-item" onclick="scrollToSection('donasi-pasien')">
+      <img src="Asset/DonasiPasien-icon.svg" alt="Donasi Pasien">
+      <span>DONASI<br>PASIEN</span>
+    </button>
+    <button class="category-item" onclick="scrollToSection('aksi-sosial')">
+      <img src="Asset/AksiSosial-icon.svg" alt="Aksi Sosial">
+      <span>AKSI<br>SOSIAL</span>
+    </button>
+    <button class="category-item" onclick="scrollToSection('galang-dana')">
+      <img src="Asset/GalangDana-icon.svg" alt="Galang Dana">
+      <span>GALANG<br>DANA</span>
+    </button>
+    <button class="category-item">
+      <img src="Asset/DonasiRutin-icon.svg" alt="Donasi Rutin">
+      <span>DONASI<br>RUTIN</span>
+    </button>
+  </section>
+
+  <!-- Donasi Pasien -->
+  <section class="donasi-section" id="donasi-pasien">
+    <div class="donasi-header">
+      <h2>DONASI PASIEN</h2>
+    </div>
+    <div class="scroll-container">
+      <button class="scroll-btn left-btn">
+        <img src="Asset/panahkiri.svg" alt="Scroll Left" class="arrow-icon">
+      </button>
+      <div class="donasi-cards"></div>
+      <button class="scroll-btn right-btn">
+        <img src="Asset/panahkanan.svg" alt="Scroll Right" class="arrow-icon">
+      </button>
+    </div>
+    <div class="lihat-lainnya-wrapper"><a href="donasipasien.html" class="lihat-lainnya-link">Lihat lainnya</a></div>
+  </section>
+
+  <!-- Aksi Sosial -->
+  <section class="donasi-section" id="aksi-sosial">
+    <div class="donasi-header">
+      <h2>AKSI SOSIAL</h2>
+    </div>
+    <div class="scroll-container">
+      <button class="scroll-btn left-btn">
+        <img src="Asset/panahkiri.svg" alt="Scroll Left" class="arrow-icon">
+      </button>
+      <div class="donasi-cards"></div>
+      <button class="scroll-btn right-btn">
+        <img src="Asset/panahkanan.svg" alt="Scroll Right" class="arrow-icon">
+      </button>
+    </div>
+    <div class="lihat-lainnya-wrapper"><a href="aksisosial.html" class="lihat-lainnya-link">Lihat lainnya</a></div>
+  </section>
+
+  <!-- Galang Dana -->
+  <section class="donasi-section" id="galang-dana">
+    <div class="donasi-header">
+      <h2>GALANG DANA</h2>
+    </div>
+    <div class="scroll-container">
+      <button class="scroll-btn left-btn">
+        <img src="Asset/panahkiri.svg" alt="Scroll Left" class="arrow-icon">
+      </button>
+      <div class="donasi-cards"></div>
+      <button class="scroll-btn right-btn">
+        <img src="Asset/panahkanan.svg" alt="Scroll Right" class="arrow-icon">
+      </button>
+    </div>
+    <div class="lihat-lainnya-wrapper"><a href="galangdana.html" class="lihat-lainnya-link">Lihat lainnya</a></div>
+  </section>
+
+  <!-- Artikel & Laporan Donasi -->
+  <section class="donasi-section" id="artikel-laporan">
+    <div class="donasi-header">
+      <h2>ARTIKEL & LAPORAN DONASI</h2>
+    </div>
+    <div class="scroll-container">
+      <button class="scroll-btn left-btn">
+        <img src="Asset/panahkiri.svg" alt="Scroll Left" class="arrow-icon">
+      </button>
+      <div class="donasi-cards"></div>
+      <button class="scroll-btn right-btn">
+        <img src="Asset/panahkanan.svg" alt="Scroll Right" class="arrow-icon">
+      </button>
+    </div>
+    <div class="lihat-lainnya-wrapper"><a href="#" class="lihat-lainnya-link">Lihat lainnya</a></div>
+  </section>
+
+  <!-- Tentang Kami Section -->
+  <section class="about-section" id="about-section">
+    <div style="height:48px;"></div>
+    <div class="about-img-wrapper">
+      <img src="Asset/gambartentangkami.jpg" alt="Tentang Kami" class="about-img">
+    </div>
+    <div class="about-content">
+      <h4 class="about-subtitle">TENTANG KAMI</h4>
+      <img src="Asset/Aidera.id.svg" alt="Aidera.id Logo" class="about-logo">
+      <div class="about-desc-wrapper">
+        <p class="about-desc">
+          Aidera.id adalah platform digital donasi yang hadir untuk menjembatani kebaikan dan harapan. Kami memfasilitasi berbagai bentuk donasi mulai dari bantuan pasien, donasi rutin, galang dana individu atau komunitas, hingga aksi sosial berskala nasional.
+          Dengan semangat transparansi dan akuntabilitas, Aidera.id telah menjadi ruang aman dan terpercaya bagi para donatur dan penerima manfaat di seluruh Indonesia. Kami tidak hanya menyalurkan bantuan, tetapi juga membangun ekosistem solidaritas yang mendukung pemulihan dan pemberdayaan.
+          Melalui sistem yang mudah diakses dan dikelola secara profesional, kami memberdayakan masyarakat untuk berbagi dalam situasi darurat medis, bencana, pendidikan, dan isu sosial lainnya. Setiap aksi kebaikan yang dimulai di Aidera.id adalah langkah kecil menuju perubahan besar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="homepagescript.js"></script>
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <img src="Asset/panahatas.svg" alt="Back to Top" class="back-to-top-icon">
+  </button>
+</body>
+</html>

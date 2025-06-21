@@ -1,0 +1,298 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('Asset/Font/LexendDeca-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('Asset/Font/LexendDeca-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .brand-logo {
+    width: 180px;
+  }
+
+  .slogan {
+    font-size: 22px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .social-icons img {
+    width: 32px;
+    margin: 0 0.3rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    background: url('Asset/LeftBG.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    padding: 2rem;
+}
+
+.quote-box {
+    text-align: center;
+    max-width: 400px;
+}
+
+.quote {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.author {
+    margin-top: 1rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.quote-logo img {
+    width: 120px;
+    margin-top: 1.5rem;
+}
+
+.right {
+    flex: 1;
+    background: url("Asset/RightBG.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+}
+
+.brand-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 0.5rem auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.brand-logo {
+    width: 250px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+}
+
+.slogan {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #213448;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 2px solid #213448;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-bottom: 2px solid #213448; /* tetap 2px */
+}
+
+.password-field {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 0; /* kanan dikasih space untuk ikon */
+    border: none;
+    border-bottom: 2px solid #213448;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.password-field input:focus {
+    border-bottom-color: #1a2a3b;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-55%);
+    cursor: pointer;
+    color: #213448;
+    font-size: 18px;
+    user-select: none;
+    line-height: 1;
+    bottom: 8px;
+    top: auto;
+    transform: none;
+}
+
+.password-toggle-icon:hover {
+    color: #1a2a3b;
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-options label,
+.form-options a {
+    color: #213448;
+}
+
+.form-options a {
+    color: #213448;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+    color: #1a2a3b;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn.primary {
+    background-color: #213448;
+    color: white;
+    border: 2px solid transparent;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #213448;
+    color: #213448;
+}
+
+.btn.primary:hover {
+    background-color: white;
+    color: #213448;
+    border: 2px solid #213448;
+}
+
+.btn.secondary:hover {
+    background-color: #213448;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.alt-login {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.alt-login p {
+    margin-bottom: 1rem;
+}
+
+.social-icons img {
+    width: 36px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.icon-box {
+    background-color: #e0e0e0; /* Warna abu-abu */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.icon-box:hover {
+    background-color: #d0d0d0; /* Warna saat hover */
+}
+
+.icon-box img {
+    width: 24px;
+    height: 24px;
+}

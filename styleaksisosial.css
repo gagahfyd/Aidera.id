@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', 'Montserrat', sans-serif;
+    background-color: #f2f4ff;
+    color: #213448;
+    padding-top: 80px;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 35px;
+  }
+  
+  .nav-menu a {
+    margin: 0 15px;
+    color: #213448;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #4b9dff;
+  }
+  
+  .nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4b9dff;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+
+  .nav-menu a.active {
+    color: #4b9dff;
+    font-weight: 400;
+  }
+  
+  .nav-menu a.active::after {
+    width: 100%;
+    background-color: #4b9dff;
+  }
+  
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 8px 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    margin: 0;
+    color: #213448;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f2f4ff;
+    color: #4b9dff;
+    transform: translateX(5px);
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  .login-btn {
+    background-color: #c7dcff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #213448;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .login-btn:hover {
+    background-color: #213448;
+    color: white;
+  }
+  
+  .donasi-pasien-main {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 16px 40px 16px;
+  }
+  
+  .filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #d2e1ff;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(33,52,72,0.06);
+    gap: 16px;
+  }
+  .filters {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .filters select {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #b0c4de;
+    font-size: 1rem;
+    background: #fff;
+    color: #213448;
+    font-family: inherit;
+    transition: border 0.2s;
+  }
+  .filters select:focus {
+    border: 1.5px solid #4b9dff;
+    outline: none;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #search-input {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #b0c4de;
+    font-size: 1rem;
+    background: #fff;
+    color: #213448;
+    font-family: inherit;
+    width: 220px;
+    transition: border 0.2s;
+  }
+  #search-input:focus {
+    border: 1.5px solid #4b9dff;
+    outline: none;
+  }
+  #search-btn {
+    background: #4b9dff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #search-btn:hover {
+    background: #213448;
+  }
+  
+  .kampanye-section {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .kampanye-card {
+    display: flex;
+    background: #eef4ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(33,52,72,0.07);
+    padding: 20px 24px;
+    gap: 24px;
+    align-items: center;
+    transition: box-shadow 0.2s;
+  }
+  .kampanye-card:hover {
+    box-shadow: 0 4px 16px rgba(33,52,72,0.13);
+  }
+  .kampanye-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #d2e1ff;
+  }
+  .kampanye-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .kampanye-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #213448;
+  }
+  .kampanye-kategori {
+    font-size: 1rem;
+    color: #4b9dff;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .kampanye-penyelenggara {
+    font-size: 0.98rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  .kampanye-progress {
+    width: 100%;
+    background: #d2e1ff;
+    border-radius: 6px;
+    height: 12px;
+    margin: 8px 0 4px 0;
+    overflow: hidden;
+  }
+  .kampanye-progress-bar {
+    height: 100%;
+    background: #4b9dff;
+    border-radius: 6px 0 0 6px;
+    transition: width 0.7s;
+  }
+  .kampanye-stats {
+    display: flex;
+    gap: 24px;
+    font-size: 0.98rem;
+    color: #213448;
+    margin-bottom: 4px;
+  }
+  .kampanye-stats span {
+    font-weight: 600;
+  }
+  .kampanye-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 6px;
+  }
+  .kampanye-days {
+    color: #e67e22;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .kampanye-donasi-btn {
+    background: #d2f4ed;
+    color: #213448;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .kampanye-donasi-btn:hover {
+    background: #213448;
+    color: #fff;
+    border: 2px solid #4b9dff;
+  }
+  
+  @media (max-width: 900px) {
+    .donasi-pasien-main {
+      max-width: 99vw;
+      padding: 0 2vw 40px 2vw;
+    }
+    .kampanye-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 10px;
+    }
+    .kampanye-img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px 8px;
+      gap: 8px;
+      align-items: center;
+    }
+    .nav-menu {
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .donasi-pasien-main {
+      padding: 0 2vw 24px 2vw;
+    }
+    .filter-section {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 12px 6px;
+    }
+    .filters {
+      gap: 8px;
+    }
+    .search-bar {
+      width: 100%;
+      justify-content: flex-start;
+    }
+    #search-input {
+      width: 100%;
+      min-width: 0;
+    }
+    .kampanye-section {
+      gap: 16px;
+    }
+    .kampanye-card {
+      padding: 10px 4px;
+    }
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-to-top-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(15%) sepia(15%) saturate(1000%) hue-rotate(180deg) brightness(20%) contrast(90%);
+  }
+  
