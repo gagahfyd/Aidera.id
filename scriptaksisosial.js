@@ -1,7 +1,7 @@
 // Dummy data kampanye donasi pasien
 const kampanyeData = [
     {
-      foto: '../Asset/aksisosial1.jpg',
+      foto: 'Asset/aksisosial1.jpg',
       judul: 'Bantu Korban Bencana Alam di Aceh',
       yayasan: 'Relawan Indonesia',
       danaTerkumpul: 150000000,
@@ -12,7 +12,7 @@ const kampanyeData = [
       status: 'Sedang Berlangsung',
     },
     {
-      foto: '../Asset/aksisosial2.jpg',
+      foto: 'Asset/aksisosial2.jpg',
       judul: 'Bantu Pembangunan Masjid di Papua',
       yayasan: 'Yayasan Amal Sejahtera',
       danaTerkumpul: 95000000,
@@ -23,7 +23,7 @@ const kampanyeData = [
       status: 'Sedang Berlangsung',
     },
     {
-      foto: '../Asset/aksisosial3.jpg',
+      foto: 'Asset/aksisosial3.jpg',
       judul: 'Bantu Pendidikan Anak Yatim',
       yayasan: 'Yayasan Peduli Anak',
       danaTerkumpul: 45000000,
@@ -34,7 +34,7 @@ const kampanyeData = [
       status: 'Sedang Berlangsung',
     },
     {
-      foto: '../Asset/aksisosial4.jpg',
+      foto: 'Asset/aksisosial4.jpg',
       judul: 'Bantu Korban Gempa di Maluku',
       yayasan: 'Tim Relawan Nasional',
       danaTerkumpul: 120000000,
@@ -45,7 +45,7 @@ const kampanyeData = [
       status: 'Sedang Berlangsung',
     },
     {
-      foto: '../Asset/aksisosial5.jpg',
+      foto: 'Asset/aksisosial5.jpg',
       judul: 'Bantu Pembangunan Sekolah di NTT',
       yayasan: 'Yayasan Pendidikan Indonesia',
       danaTerkumpul: 85000000,
@@ -56,7 +56,7 @@ const kampanyeData = [
       status: 'Sedang Berlangsung',
     },
     {
-      foto: '../Asset/aksisosial6.jpg',
+      foto: 'Asset/aksisosial6.jpg',
       judul: 'Bantu Korban Banjir di Jakarta',
       yayasan: 'Relawan Jakarta',
       danaTerkumpul: 75000000,
@@ -85,7 +85,7 @@ const kampanyeData = [
       const card = document.createElement('div');
       card.className = 'kampanye-card';
       card.innerHTML = `
-        <img src="${item.foto}" alt="${item.judul}" class="kampanye-img" onerror="this.src='../Asset/AksiSosial-icon.svg'">
+        <img src="${item.foto}" alt="${item.judul}" class="kampanye-img" onerror="this.src='Asset/AksiSosial-icon.svg'">
         <div class="kampanye-info">
           <div class="kampanye-kategori">${item.kategori}</div>
           <div class="kampanye-title">${item.judul}</div>

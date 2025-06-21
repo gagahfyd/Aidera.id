@@ -1,7 +1,7 @@
 // Dummy data kampanye donasi pasien
 const kampanyeData = [
   {
-    foto: '../Asset/pasien1.jpg',
+    foto: 'Asset/pasien1.jpg',
     nama: 'Rina Putri',
     penyakit: 'Kanker Darah',
     yayasan: 'Yayasan Harapan Sehat',
@@ -13,7 +13,7 @@ const kampanyeData = [
     kondisi: 'waktu',
   },
   {
-    foto: '../Asset/pasien2.jpg',
+    foto: 'Asset/pasien2.jpg',
     nama: 'Rizky Ramadhan',
     penyakit: 'Jantung Bawaan',
     yayasan: 'Rumah Peduli',
@@ -25,7 +25,7 @@ const kampanyeData = [
     kondisi: 'dana',
   },
   {
-    foto: '../Asset/pasien3.jpg',
+    foto: 'Asset/pasien3.jpg',
     nama: 'Ibu Siti Aminah',
     penyakit: 'Ginjal Kronis',
     yayasan: 'Relawan Wilayah Timur',
@@ -37,7 +37,7 @@ const kampanyeData = [
     kondisi: 'waktu',
   },
   {
-    foto: '../Asset/pasien4.jpg',
+    foto: 'Asset/pasien4.jpg',
     nama: 'Budi Santoso',
     penyakit: 'Kecelakaan',
     yayasan: 'Yayasan Kemanusiaan',
@@ -49,7 +49,7 @@ const kampanyeData = [
     kondisi: 'waktu',
   },
   {
-    foto: '../Asset/pasien5.jpg',
+    foto: 'Asset/pasien5.jpg',
     nama: 'Soleh Hidayat',
     penyakit: 'Katarak',
     yayasan: 'Yayasan Mata Sehat',
@@ -78,7 +78,7 @@ function renderKampanyeList(data) {
     const card = document.createElement('div');
     card.className = 'kampanye-card';
     card.innerHTML = `
-      <img src="${item.foto}" alt="${item.nama}" class="kampanye-img" onerror="this.src='../Asset/DonasiPasien-icon.svg'">
+      <img src="${item.foto}" alt="${item.nama}" class="kampanye-img" onerror="this.src='Asset/DonasiPasien-icon.svg'">
       <div class="kampanye-info">
         <div class="kampanye-penyakit">${item.penyakit}</div>
         <div class="kampanye-title">${item.nama}</div>

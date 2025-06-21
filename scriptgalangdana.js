@@ -1,7 +1,7 @@
 // Dummy data kampanye galang dana
 const kampanyeData = [
   {
-    foto: '../Asset/galangdana1.jpg',
+    foto: 'Asset/galangdana1.jpg',
     judul: 'Bantu Biayai Pembuatan Film Dokumenter Sejarah Kabupaten Klaten',
     penyelenggara: 'Rumah Dokumenter',
     danaTerkumpul: 33750000,
@@ -12,7 +12,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana2.jpg',
+    foto: 'Asset/galangdana2.jpg',
     judul: 'Bantu Produksi Album Musik Indie Lokal',
     penyelenggara: 'Komunitas Musik Indonesia',
     danaTerkumpul: 45000000,
@@ -23,7 +23,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana3.jpg',
+    foto: 'Asset/galangdana3.jpg',
     judul: 'Bantu Penerbitan Buku Sejarah Indonesia',
     penyelenggara: 'Penerbit Sejarah Nusantara',
     danaTerkumpul: 28500000,
@@ -34,7 +34,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana4.jpg',
+    foto: 'Asset/galangdana4.jpg',
     judul: 'Bantu Produksi Film Pendek Dokumenter',
     penyelenggara: 'Studio Film Dokumenter',
     danaTerkumpul: 52000000,
@@ -45,7 +45,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana5.jpg',
+    foto: 'Asset/galangdana5.jpg',
     judul: 'Bantu Pameran Seni Rupa Kontemporer',
     penyelenggara: 'Galeri Seni Indonesia',
     danaTerkumpul: 38000000,
@@ -56,7 +56,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana6.jpg',
+    foto: 'Asset/galangdana6.jpg',
     judul: 'Bantu Festival Budaya Nusantara',
     penyelenggara: 'Yayasan Budaya Indonesia',
     danaTerkumpul: 75000000,
@@ -67,7 +67,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana7.jpg',
+    foto: 'Asset/galangdana7.jpg',
     judul: 'Bantu Pembangunan Masjid di Desa Terpencil',
     penyelenggara: 'Yayasan Masjid Indonesia',
     danaTerkumpul: 125000000,
@@ -78,7 +78,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana8.jpg',
+    foto: 'Asset/galangdana8.jpg',
     judul: 'Bantu Renovasi Gereja Tua',
     penyelenggara: 'Komunitas Kristen Indonesia',
     danaTerkumpul: 85000000,
@@ -89,7 +89,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana9.jpg',
+    foto: 'Asset/galangdana9.jpg',
     judul: 'Bantu Pembangunan Vihara',
     penyelenggara: 'Yayasan Buddha Indonesia',
     danaTerkumpul: 95000000,
@@ -100,7 +100,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana10.jpg',
+    foto: 'Asset/galangdana10.jpg',
     judul: 'Bantu Pembangunan Jembatan Desa',
     penyelenggara: 'Komunitas Peduli Desa',
     danaTerkumpul: 180000000,
@@ -111,7 +111,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana11.jpg',
+    foto: 'Asset/galangdana11.jpg',
     judul: 'Bantu Pembangunan Perpustakaan Desa',
     penyelenggara: 'Yayasan Literasi Indonesia',
     danaTerkumpul: 65000000,
@@ -122,7 +122,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana12.jpg',
+    foto: 'Asset/galangdana12.jpg',
     judul: 'Bantu Pembangunan Posyandu',
     penyelenggara: 'Komunitas Kesehatan Desa',
     danaTerkumpul: 45000000,
@@ -133,7 +133,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana13.jpg',
+    foto: 'Asset/galangdana13.jpg',
     judul: 'Bantu Program Pelatihan Wirausaha',
     penyelenggara: 'Komunitas Pengusaha Muda',
     danaTerkumpul: 75000000,
@@ -144,7 +144,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana14.jpg',
+    foto: 'Asset/galangdana14.jpg',
     judul: 'Bantu Program Konservasi Lingkungan',
     penyelenggara: 'Komunitas Hijau Indonesia',
     danaTerkumpul: 55000000,
@@ -155,7 +155,7 @@ const kampanyeData = [
     status: 'Sedang Berlangsung',
   },
   {
-    foto: '../Asset/galangdana15.jpg',
+    foto: 'Asset/galangdana15.jpg',
     judul: 'Bantu Program Beasiswa Mahasiswa',
     penyelenggara: 'Yayasan Pendidikan Indonesia',
     danaTerkumpul: 120000000,
@@ -184,7 +184,7 @@ const kampanyeData = [
       const card = document.createElement('div');
       card.className = 'kampanye-card';
       card.innerHTML = `
-        <img src="${item.foto}" alt="${item.judul}" class="kampanye-img" onerror="this.src='../Asset/AksiSosial-icon.svg'">
+        <img src="${item.foto}" alt="${item.judul}" class="kampanye-img" onerror="this.src='Asset/AksiSosial-icon.svg'">
         <div class="kampanye-info">
           <div class="kampanye-kategori">${item.kategori}</div>
           <div class="kampanye-title">${item.judul}</div>
